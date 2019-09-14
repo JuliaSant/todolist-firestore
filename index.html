@@ -1,0 +1,42 @@
+<html>
+
+<head>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Criando sua Lista!</h1>
+
+    <div class="content">
+
+        <form id="add-item-form">
+            <input type="text" name="name" placeholder="nome">
+            <input type="text" name="desc" placeholder="Descrição">
+            <button>Adicionar</button>
+        </form>
+        <ul id="item-list"></ul>
+
+    </div>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCoMBJaHKhyZzJIVJQ1pSA9zXSyH2rki8c",
+            authDomain: "todo-node-470dc.firebaseapp.com",
+            databaseURL: "https://todo-node-470dc.firebaseio.com",
+            projectId: "todo-node-470dc",
+            storageBucket: "todo-node-470dc.appspot.com",
+            messagingSenderId: "376210767066",
+            appId: "1:376210767066:web:97df2c4ffbb9354f3979e3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
